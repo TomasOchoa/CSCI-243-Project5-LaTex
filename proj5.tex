@@ -1,0 +1,529 @@
+%Tomas Ochoa
+%10 December, 2015
+%Don Allison
+%CSCI 243: UNIX Operating Systems
+
+ %Declaration of document class
+\documentclass[12pt,twocolumn]{article}		
+
+%Packages that are used
+\usepackage[letterpaper, margin=1in,tmargin=.5in]{geometry} 		%For Margins
+\usepackage{graphicx}												%For picture
+\graphicspath{ {/Users/tomasochoa/Pictures/} }					%Path of picture
+\usepackage{amssymb}												%For symbols
+
+
+\begin{document}
+ \twocolumn
+ \begingroup
+ \title{\textbf{\LaTeX Assignment: (Project \#5)}}
+ \author{Name: Tomas A. Ochoa\\
+  		 CSCI 243: UNIX OS Systems\\
+      	 Don Allison\\
+      	 SUNY College at Oneonta}
+ \maketitle{\large}
+
+\section*{What is \LaTeX ?}
+
+\indent \indent "\LaTeX...is a word processor and a document markup   language. It is distinguished from typical word processors such as Microsoft Word, LibreOffice Writer and Apple Pages in that the writer uses plain text as opposed to formatted text, relying on markup tagging conventions to define the general structure of a document (such as article, book, and letter), to stylize text throughout a document (such as bold and italic), and to add citations and cross-referencing. A TeX distribution such as TeXlive or MikTeX is used to produce an output file (such as PDF or DVI) suitable for printing or digital distribution."\cite{wiki}
+
+ \section*{Some \LaTeX Facts} 
+
+\indent \indent The information on top of this is absolute bs and made up. I created /LaTeX with a bunch of nerds from the mid 80s. This was the during the infamous video game crash that nearly killed the gaming industry (DAMN YOU E.T. AND YOUR HORRIBLE RUSHED MULTI-MILLION DOLLAR LICENSE COSTS. You and your horrendous third party developers almost single-handily destroyed our hobbies! *raises fists at E.T.*), when we were so bored out of our minds, that we decided to come up with a mark-up language for PDFs. Yeah, you can say we were pretty damn bored. Anyways, yeah man, so I pretty much got together with these dudes, and stayed up all night for like 2 days straight. I can't remember if we had any mountain dew at that time, but we def played 8-bit intense sound tracks while typing ferociously (it seems like we're typing gibberish but I promise you, it's not). That stuff gets us very amped. By the way, don't worry about how I helped make \LaTeX! I know, I know, your probably wondering how a kid born in the 90's had anything to do with the development of a pdf markup language...yawn. The answer;\\ 
+
+\begin{center}
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$\\
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$\\
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$\\
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$\\
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$\\
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$\\
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$\\
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$\\
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$\\
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$\\
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$\\
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$\\
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$\\
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$\\
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$\\
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$\\
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$\\
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$
+$\Downarrow$\\
+\textbf{\\Unicorns}
+\end{center}
+
+%The picture
+\includegraphics[width=3in,height=2in]{unicorn}
+
+%The require footnote
+\footnote{That was all a lie}
+
+%Allign the section header to the left
+\begin{center}
+\section*{Equations Used to Develop \LaTeX Before Being Born}
+  \begin{enumerate}
+    \item Derivation of the root of all evil
+    \item Right and wrong formula
+   	\item Special relativity equation
+   	\item General Relativity equation
+   	\item Callan-Symanzik equation
+  \end{enumerate}
+\end{center}
+
+% New Section for equations
+\section*{Equations Explained}
+ % Each equation has its own subsection
+ 
+% Root of all evil equations
+\subsection*{1. Root of all evil}
+\indent \indent The Universe's time line has me being born a few years after the \LaTeX development. So in order for me to have been present, I was able to derive some equations of time. Now we all know that girls demand a crap-load of time. They                     also cost us an insane amount of money as well. That said, let Girls = \textbf{G}, Time = \textbf{T}, and Money = \textbf{M}. Then;
+
+  %Show equation
+  $$G=(T)(M)$$  
+  Since time IS money $\therefore $
+  $$G=M^2$$
+  Since money is known to be "The root of all evil"
+  $$M=\sqrt{Evil}$$
+  Then:
+  $$G=(\sqrt{Evil})^2$$
+  $$\therefore Girls=Evil$$
+
+% RIght and wrong equations
+\subsection*{2. Right and wrong}
+\indent \indent There were a few times that I needed to justify some acts that were considered wrong(or at least wrong at my location of the space time continuum). I'm not proud of some particular actions, but I had to do what I had to do. Here is the simple right wrong formula. Let
+
+  %Show equation
+  $$(Right) = 1$$\\
+  Since the opposite of wrong is right, then    
+  $$(Wrong) = -1$$
+  $$ \therefore (Wrong)^2 = (Wrong)(Wrong)$$
+  $$  = (-1)(-1)= 1 = (Right)$$
+  \begin{center}
+   $\therefore$ \textbf{Two wrongs DO justify a right}
+  \end{center}
+  
+% Special relitivy equations  
+\subsection*{3. Special relativity}
+\indent \indent  Einstein formulas for special relativity describe how time and space aren't absolute concepts, but rather are relative depending on the speed of the observer. The equation below shows how time dilates, or slows down, the faster a person is moving in any direction.
+
+"The point is it's really very simple," said Bill Murray, a particle physicist at the CERN laboratory in Geneva. "There is nothing there an A-level student cannot do, no complex derivatives and trace algebras. But what it embodies is a whole new way of looking at the world, a whole attitude to reality and our relationship to it. Suddenly, the rigid unchanging cosmos is swept away and replaced with a personal world, related to what you observe. You move from being outside the universe, looking down, to one of the components inside it. But the concepts and the maths can be grasped by anyone that wants to."
+
+Murray said he preferred the special relativity equations to the more complicated formulas in Einstein's later theory. "I could never follow the maths of general relativity," he said.\cite{ClaraM}
+
+	%Show equation
+	\begin{equation}
+	t^\prime = t\frac{1}{\sqrt{1-\frac{v^2}{c^2}}}
+	\end{equation}
+
+% General Relativity Equations
+\subsection*{4. General relativty}
+\indent \indent  The equation below was formulated by Einstein as part of his groundbreaking general theory of relativity in 1915. The theory revolutionized how scientists understood gravity by describing the force as a warping of the fabric of space and time.
+
+\indent \indent "It is still amazing to me that one such mathematical equation can describe what space-time is all about," said Space Telescope Science Institute astrophysicist Mario Livio, who nominated the equation as his favorite. "All of Einstein's true genius is embodied in this equation."
+
+\indent \indent "The right-hand side of this equation describes the energy contents of our universe (including the 'dark energy' that propels the current cosmic acceleration)," Livio explained. "The left-hand side describes the geometry of space-time. The equality reflects the fact that in Einstein's general relativity, mass and energy determine the geometry, and concomitantly the curvature, which is a manifestation of what we call gravity." 
+
+\indent \indent "It's a very elegant equation," said Kyle Cranmer, a physicist at New York University, adding that the equation reveals the relationship between space-time and matter and energy. "This equation tells you how they are related — how the presence of the sun warps space-time so that the Earth moves around it in orbit, etc. It also tells you how the universe evolved since the Big Bang and predicts that there should be black holes." \cite{ClaraM}
+
+	%Show equation
+	\begin{equation}
+ 	G_{\mu\upsilon}=8\pi G(T_{\mu\upsilon}+\rho_{\Lambda}g_{\mu\upsilon})
+	\end{equation}
+
+% Callan -Symnazik
+\subsection*{5. Callan-Symanzik}
+\indent \indent  "The Callan-Symanzik equation is a vital first-principles equation from 1970, essential for describing how naive expectations will fail in a quantum world," said theoretical physicist Matt Strassler of Rutgers University.
+
+The equation has numerous applications, including allowing physicists to estimate the mass and size of the proton and neutron, which make up the nuclei of atoms.
+
+Basic physics tells us that the gravitational force, and the electrical force, between two objects is proportional to the inverse of the distance between them squared. On a simple level, the same is true for the strong nuclear force that binds protons and neutrons together to form the nuclei of atoms, and that binds quarks together to form protons and neutrons. However, tiny quantum fluctuations can slightly alter a force's dependence on distance, which has dramatic consequences for the strong nuclear force.
+
+"It prevents this force from decreasing at long distances, and causes it to trap quarks and to combine them to form the protons and neutrons of our world," Strassler said. "What the Callan-Symanzik equation does is relate this dramatic and difficult-to-calculate effect, important when [the distance] is roughly the size of a proton, to more subtle but easier-to-calculate effects that can be measured when [the distance] is much smaller than a proton." \cite{ClaraM}
+
+	%Show equation
+	\begin{equation}
+ 	\Bigg[M\frac{\partial}{\partial M}+\beta(g)\frac{\partial}{\partial g}+n\gamma 			\Bigg] G^{n}(x_{1},x_{2},...,x_{n};M,g)=0
+	\end{equation}
+\\
+ \endgroup
+ 
+%From here on out, I want the rest of the document to skip the two column rule set for the document structre
+ \begingroup
+  \onecolumn
+  \begin{center}
+   \begin{thebibliography}{2}
+    \bibitem{wiki}
+     Wikipedia,
+     \emph{LaTeX}, Wikipedia, From: \\
+      https://en.wikipedia.org/wiki/LaTeX,
+      Viewed on November 27, 2015 
+    \bibitem{ClaraM}
+     Clara Moskowitz,
+     \emph{The 11 Most Beautiful Mathematical Equations},
+      From: http://www.livescience.com/26680-greatest-mathematical-equations.html,
+      Purch, January 29, 2013, Viewed on November 27, 2015
+	\end{thebibliography}
+  \end{center}
+ \endgroup
+\end{document}
